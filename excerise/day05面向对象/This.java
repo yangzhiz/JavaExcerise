@@ -3,7 +3,7 @@ this:用于区分局部变量和成员变量同名的情况。
 this:就代表本类的对象，但是代表哪一个呢？
      ---this代表他所在函数所属对象的引用。this代表他所在函数所属对象的引用。
 	    简单说：哪个对象在调用this所在的函数，this就代表哪个对象！
-this的应用：当定义类中功能时，该函数内部要用到调用该函数的对象时，这是用this来表示这个对象。
+this的应用：当定义类中功能时，该函数内部要用到调用该函数的对象时，这时用this来表示这个对象。
             但凡本类功能内部使用到了本类对象，都用this表示。
 */
 class Person
@@ -19,7 +19,7 @@ class Person
 	Person(String name) //局部变量name
 	{
 		//name = name;//此处的name均为局部变量
-		this.name = name; //this.name 对象的name
+		this.name = name; //this.name---对象的name
 	}
 	Person(String name,int age)
 	{
