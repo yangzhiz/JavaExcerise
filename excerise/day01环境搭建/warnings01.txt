@@ -1,0 +1,32 @@
+1、当新建为记事本文件时，最终要另存为.java文件。
+
+2、注释错误：文档注释/多行注释不允许嵌套多行注释
+/*
+/*  abc  */
+def  非法语句
+*/  
+
+3、编程习惯：
+
+首先写注释
+/*
+需求：
+
+思路：
+
+步骤:1、通过class关键字定义一个类，将代码都编写到该类中
+     2、为了保证该类的独立运行。在类中定义主函数。格式为public static void main(String[] args)
+     3、保存成为一个扩展名为Java的文件
+     4、在dos控制台中通过JDK自带的javac工具对java文件进行编译。编译只检查是否有语法错误。
+     5、再通过java命令对生成的class文件进行执行。运行才会分配内存。
+     6、遇到死循环，Ctrl+C强制结束；
+class Demo   //若为 public class Demo 则java文件名也必须为Demo
+{
+        //主函数
+	public static void main(String[] args)
+	{
+	  System.out.println("hello java");//输出语句
+	}
+
+}
+*/
