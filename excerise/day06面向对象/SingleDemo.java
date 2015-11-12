@@ -14,12 +14,30 @@ java中有23中设计模式。
 1、将构造函数私有化。
 2、在类中创建一个本类对象。
 3、提供一个方法可以获取。
-方法二：懒汉式
+方法二：懒汉式（面试：特点在于实例的延迟加载，多线程访问时产生安全问题，可以使用同步函数或同步代码块解决，但是低效。使用双重判断可以解决效率问题。加同步时使用的锁是该类所属的字节码文件。）
+        private Single(){}//1
+	private static Single s = null;//2
+	public static Single getInstance()//3
+	{
+	    if(s == null)
+	    {
+		synchronized(Single.class)
+                {
+                    if(s==null)
+		    s = new Single();
+                 }	     
+             }  
+	     return s;
+	}
+
+
+
+
 
 当需要将该事物的对象保证在内存中唯一时，就将以上的三步加上即可。
 */
 
-class Single
+class Single //饿汉式
 {
 	private Single(){}//1
 	private static Single s = new Single();//2
