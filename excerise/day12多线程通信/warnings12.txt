@@ -1,0 +1,9 @@
+JDK1.5中提供了多线程的升级解决方案。=-----显式的锁机制
+将同步Synchronized替换成显示Lock操作。  
+
+Lock lock = new ReentrantLock();   // Lock.lock();   Lock.unlock();
+
+将Object中的wait,notify,notifyAll替换成了Condition对象。
+该对象可以通过lock进行获取。且在一个锁中可以对应多个condition对象。
+
+private Condition condition = lock.newCondition();
