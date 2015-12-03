@@ -43,7 +43,7 @@ interface A
 {
 	void methodA();
 }
-interface B extends A   //类与类之间是继承，类与接口之间是实现，接口与接口之间是继承，而且接口之间可以多继承。因为接口没有方法体。
+interface B extends A   //类与类之间是继承，类与接口之间是实现，接口与接口之间是继承，而且接口之间可以多继承。因为接口的方法没有方法体。
 {
 	void methodB();
 }
@@ -52,8 +52,8 @@ class InterfaceDemo
 	public static void main(String[] args) 
 	{
 		Test t = new Test();
-		System.out.println(t.NUM);
-		System.out.println(Test.NUM);
-		System.out.println(Inter.NUM);
+		System.out.println(t.NUM);			//3
+		System.out.println(Test.NUM);		//3
+		System.out.println(Inter.NUM);		//3
 	}
 }

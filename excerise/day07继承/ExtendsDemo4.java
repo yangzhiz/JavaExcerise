@@ -49,6 +49,6 @@ class ExtendsDemo4
 	public static void main(String[] args) 
 	{
 		Son s = new Son();// father run    son run 
-		Son s1 = new Son(4);// father run    son run   father run  son run4
+		Son s1 = new Son(4);//father run4  son run4
 	}
 }
